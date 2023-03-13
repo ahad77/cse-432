@@ -1,0 +1,35 @@
+.hedar{
+  text-align: center;
+}
+  .pp{
+    color: #670026;
+  }
+  .lgg{
+    size: 50px;
+    align-items:flex-end ;
+  }
+  label{
+    width: 100px;
+    display: inline-block;
+    margin: 4px;
+  }
+  .inform{
+    border: double;
+    border-radius: 10px;
+    border-color: #670026;
+    width: 500px;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subres{
+    text-align: center;
+  }
+  p{
+    text-align: center;
+    color: #670026;
+  }
+  select{
+    width: 20em;
+  }
