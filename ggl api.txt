@@ -1,0 +1,6 @@
+client id
+79385688518-chavocemo8faqi5p2m9g5hs5mo86vj0t.apps.googleusercontent.com
+
+client secret
+
+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

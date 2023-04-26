@@ -33,3 +33,50 @@
   select{
     width: 20em;
   }
+
+   
+  
+  .dlogo img{
+    float: left;
+    height: 90px;
+    padding-left: 15px;
+    padding-top: 10px ;
+  }
+  .viewname{
+    float: right;
+    font-size: 15px;
+    padding-top: 10px; 
+    padding-right: 10px;
+    position: static;
+    z-index: auto;
+    line-height: 16px;
+    display: inline;
+    box-sizing: content-box;
+    
+  }
+.aa{
+  color: #da1d26;
+  text-decoration: none;
+}
+.im img{
+  border-radius: 30%;
+  height: 60%;
+  width: 75%;
+}
+
+.aab{
+  color: #3eec72;
+  text-decoration: none;
+}
+.scl h3{
+  color: #2da4b9;
+}
+.nott{
+  background-color: #670026;
+}
+ 
+
+
+
+
+ 
