@@ -86,8 +86,228 @@
         <div class="col-9">
           <h1>Welcom to EDU Blackbox</h1><br><br>
         </div>
-        <div class="col-9">
-        <h3 class="d-flex justify-content-center nott">Account Summary</h3>
+        <div class=" container col-9">
+        <h3 class="d-flex justify-content-center nott">Account Summary</h3><br>
+        
+        <div class=" col-6" style="float:left"><!-- sspring20-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from spring20  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Spring 20</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- summer20-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from summer20  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Summer 2020</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- fall20-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from fall20  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Fall 2020</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- spring21-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from spring21  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Spring 2021</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- summer21-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from summer21  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Summer 2021</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- fall21-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from fall21  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Fall 2021</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- spring22-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from spring22  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Spring 2022</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- summer22-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from summer22  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Summer 2022</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- fall22-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from fall22  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Fall 2022</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
+
+          <div class=" col-6" style="float:left"> <!-- spring23-->
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from spring23  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+          <h5 class="d-flex justify-content-center nott" >Spring 2023</h5>
+            <span style="display-inline"> <b> Student ID : </b><?php echo $row['id']; ?> </span><br><br>
+            <span style="display-inline"> <b> Taken Credit Hour : </b><?php echo $row['tc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Sub-Total Fees : </b> <?php echo $row['stf']; ?> </span><br><br>
+            <span style="display-inline"> <b> Discount & Scholarship : </b><?php echo $row['ds']; ?> </span><br><br>
+            <span style="display-inline"> <b> Semester Fees : </b><?php echo $row['sf']; ?> </span><br><br>
+            <span style="display-inline"> <b> ID Card & Other Charges : </b><?php echo $row['ioc']; ?> </span><br><br>
+            <span style="display-inline"> <b> Total Fees & Charges : </b> <?php echo $row['tfc']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
         </div>
         <div class="col-3">
         <h3 class="d-flex justify-content-center nott">Due Date</h3>

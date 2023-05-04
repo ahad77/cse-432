@@ -88,46 +88,53 @@
         </div>
 
         <div class="col-md-8 mt-1">
-          <form action="profile.php" method="post">
-            <b><label for="n">Name :</label></b>
-            <input id="fn" type="text" placeholder="Enter your name" name="name" required><br><br> 
+            <?php
+            $ssid = $_SESSION["ssid"];
+            $sql = "select * from profiles where id = $ssid";
+            $result = $con->query($sql);
+                      if($result->num_rows > 0){
+                        while($row = $result->fetch_assoc()){
+            ?>
 
-            <b><label for="fn">Father's Name :</label></b>
-              <input id="fn" type="text" placeholder="Enter your father's name" name="father" required><br><br>
-
-            <b><label for="mn">Mother's Name :</label></b>
-              <input id="mn" type="text" placeholder="Enter your mother's name" name="mother" required><br><br>
-
-            <b><label for="db">Date of Birth:</label></b>
-              <input id="db" type="date" placeholder="Enter your DOB" name="dob" required><br><br>
-
-            <b><label for="#">Gender:</label></b>
-              <input id="#" type="radio" placeholder="" name="gender" required>
-              <label for="#">Male</label>
-              <input id="#" type="radio" placeholder="" name="gender" required>
-              <label for="#">Female</label>
-            <br><br>
-
-            <b><label for="cn">Contact No :</label></b>
-            <input id="ad" type="text" placeholder="Enter your address" name="address" required><br><br>
             
-            <b><label for="em">Email :</label></b>
-              <input id="em" type="email" placeholder="Enter your email" name="email" required><br><br>
-            <b><label for="ad">Address :</label></b>
-              <input id="ad" type="text" placeholder="Enter your address" name="address" required><br><br>
+            <b><label >Name :</label></b>
+              <?php echo $row['name']; ?> <br><br> 
 
-            <button type="submit"  name="Save" class="btn btn-outline-secondary btn-sm">Save</button><br><br>
+            <b><label >Father's Name :</label></b>
+              <?php echo $row['father']; ?> <br><br>
+
+            <b><label >Mother's Name :</label></b>
+              <?php echo $row['mother']; ?><br><br>
+
+            <b><label >Date of Birth:</label></b>
+              <?php echo $row['dob']; ?><br><br>
+
+            <b><label >Gender:</label></b>
+              <?php echo $row['gender']; ?> <br><br>
+
+            <b><label >Contact No :</label></b>
+              <?php echo $row['contact']; ?> <br><br>
+            
+            <b><label >Email :</label></b>
+              <?php echo $row['email']; ?> <br><br>
+            <b><label >Address :</label></b>
+              <?php echo $row['address']; ?> <br><br>
+
             
              
             
     <br>
-          </form>
         </div>
 
         <div class="im col-4">
-          <img src="photos/gggg.jpg" alt="" name="image">
+        <img src="<?php echo $row['image']; ?>">
         </div>
       </div>
+
+      <?php
+                        }
+                      }
+      ?>
     </div>
 
 
@@ -144,46 +151,3 @@
 </body>
 </html>
 
-<?php
-  if($_POST['Save'])
-  {
-    $name = $_POST['name'];
-    $father = $_POST['father'];
-    $mother = $_POST['mother'];
-    $dob = $_POST['dob'];
-    $gender = $_POST['gender'];
-    $contact = $_POST['contact'];
-    $email = $_POST['email'];
-    $address = $_POST['address'];
-    
-
-  
-    $query ="INSERT INTO profilee VALUES ('$name','$father', '$mother','$dob', '$gender', '$contact','$email', '$address')";
-    $result = mysqli_query($con, $query);
-    if($result)
-            {
-                echo '
-                <div class="container">
-                <div class="alert alert-success d-flex align-items-center" role="alert">
-                  <b>Information Saved Successfully.</b>
-                </div>
-                </div>
-
-              ';
-    
-             }
-    else{
-          echo '
-        <div class="container">
-        <div class="alert alert-danger d-flex align-items-center" role="alert">
-          <b>404 ERROR!!</b>
-        </div>
-        </div>
-
-
-        ';
-            }
-
-    }
-
-    ?>

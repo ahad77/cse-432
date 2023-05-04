@@ -86,17 +86,69 @@
         <div class="col-9">
           <h1>Welcom to EDU Blackbox</h1><br><br>
         </div>
-        <div class="col-6">
+        <div class="">
           <h3 class="d-flex justify-content-center nott">Academic Report</h3>
-        <b><label>StudentID :</label></b><br>
-        <b><label>Name :</label></b><br>
-        <b><label>Cumulative GPA :</label></b><br>
-        <b><label>Total Credit Hour:</label></b><br>
-        <b><label>Completed Credit Hour:</label></b><br>
-        </div>
-        <div class="col-6">
+          <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from result  where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+    <div class="container">
+        <span style="display-inline"> <b>StudentID :</b> <?php echo $row['id']; ?></span><br><br>
+        <span style="display-inline"><b>Cumulative GPA :</b> <?php echo $row['cg']; ?></span><br><br>
+        <span style="display-inline"><b>Total Credit Hour :</b> <?php echo $row['total credit']; ?></span><br><br>
+        <span style="display-inline"><b>Completed Credit Hour :</b> <?php echo $row['comcredit']; ?></span><br>
+        <?php
+                  }
+                }
+?>
+        </div><br>
+        <div class="">
         <h3 class="d-flex justify-content-center nott">Academic Transcript</h3>
+        <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from transcript where id = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+        <div class="container  col-5" style="float:left">
+        <h3 class="d-flex justify-content-center nott">Spring '20</h3>
+          <span style="display-inline"> <b> CGPA : </b> <?php echo $row['sp20']; ?></span><br><br>
 
+          <h3 class="d-flex justify-content-center nott">Summer '20</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['sm20']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Fall '20</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['fall20']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Spring '21</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['sp21']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Summer '21</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['sm21']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Fall '21</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['fall21']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Spring '22</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['sp22']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Summer '22</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['sm22']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Fall '22</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['fall22']; ?></span><br><br>
+
+          <h3 class="d-flex justify-content-center nott">Spring '23</h3>
+          <span style="display-inline"> <b> CGPA : </b><?php echo $row['sp23']; ?></span><br><br>
+            <?php
+                  }
+                }
+?>
+          </div>
 
         </div>
       </div>

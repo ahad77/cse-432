@@ -40,6 +40,8 @@ include("dbcn.php");
     <br>
     <label for="un"><b>Username</b></label>
     <input id="un" type="text" placeholder="Enter your username" name="username" required><br><br>
+    <label for="ssid"><b>StudentID</b></label>
+    <input id="ssid" type="text" placeholder="Enter your student id" name="ssid" required><br><br>
     <label for="pass"><b>Password</b></label>
     <input id="pass" type="password" placeholder="Enter your Password"  minlength="8" name="password" required><br><br>
     <label for="usertype"><b>Usertype</b></label>
