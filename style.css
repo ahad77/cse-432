@@ -72,11 +72,19 @@
   color: #2da4b9;
 }
 .nott{
-  background-color: #670026;
+  background-color: #660025;
+  color: white;
+  font-size: 22px;
 }
- 
-
-
+.nt{
+  text-decoration: none;
+  color: #da1d26;
+  font-size: 13px;
+}
+.uppp{
+  background-image: url(photos/bbb.jpg);
+  
+}
 
 
  

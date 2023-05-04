@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
             
             <div class="viewname">
                 <span>
-                    <h3><b><?php echo $_SESSION["ssid"]?></b></h3>
+                    <h3><b><?php echo $_SESSION["username"]?></b></h3>
                     <br>
                     <i>student / active</i>
                     <br>
@@ -58,9 +58,9 @@
 <main>
 
 
-<section class=" ">
+<section class="">
 <div class="">
-  <div class=" nav-item">
+  <div class=" nav-item ">
     <div class="nav-link active aria-current="page" col dlogo">
     <ul class="nav nav-tabs">
   <li class="nav-item">
@@ -86,11 +86,20 @@
         <div class="col-9">
           <h1>Welcom to EDU Blackbox</h1>
         </div>
-        <div class="col-8">
-          <b><a class="aa" href="profile.php">🔻Profile</a></b>
+        <div class="col-8 ">
+          <h4><b><a class="aa" href="profile.php">🔻Profile</a></b></h4>
         </div>
-        <div class="col-4 nott">
-          <p class="aa "><b>Notice</b></p>
+        <div class="col-4 ">
+        <h4 class="d-flex justify-content-center nott ">News & Announcements</h4>
+          <div>
+            <a  class="nt" href="">▪️ Payment Notice 1st Installment, Spring 2023 Masters Program</a><br>
+            <a class="nt" href="">▪️ Payment Notice Final Installment, Spring 2023</a><br>
+            <a class="nt" href="">▪️ EDU Shuttle Bus Schedule for Holy Ramadan (Friday 24-March 2023)</a><br>
+            <a class="nt" href="">▪️ EDU Shuttle Bus Schedule for Holy Ramadan ( Saturday to Thursday)</a><br>
+            <a class="nt" href="">▪️ MSc Data Analytics Ramadan Class Routine Spring-2023 Batch 2</a><br>
+            <a class="nt" href="">More News...</a><br>
+            
+          </div>
         </div>
       </div>
     </div>

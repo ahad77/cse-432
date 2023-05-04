@@ -15,13 +15,20 @@ include("dbcn.php");
     <script type="text/javascript"src="multiselect-dropdown.js"></script>
     
 </head>
-<body>
+<body style="background-image: url('photos/bbb.jpg');  background-repeat: no-repeat;background-attachment: fixed;
+  background-size: 100% 100%;">
     
     
   <section class="hedar"> 
+    <br>
+  <div class="container d-grid gap-2 col-1 mx-auto " style="float:right">
+    <a class="btn btn-outline-success" target="_blank" href="signup.php">Signup</a>
+    
+    
+    </div>
   <div>
     <br><br>
-    <img style="height: 170px;"class="lgg" src="photos/logo.png" alt=""> <br><br>
+    <img style="height: 170px;"class="lgg" src="photos/logo.png" alt=""> <br><br><br><br><br>
   </div>
   
   </section>
@@ -31,10 +38,15 @@ include("dbcn.php");
     <section class="inform d-flex justify-content-center">
     <form class="pp" action="loginsub.php" method="post">
     <br>
-    <label for="mail"><b>Student ID</b></label>
-    <input id="mail" type="text" placeholder="Enter your Student ID" name="ssid" pattern="[0-9]{9}" required><br><br>
+    <label for="un"><b>Username</b></label>
+    <input id="un" type="text" placeholder="Enter your username" name="username" required><br><br>
     <label for="pass"><b>Password</b></label>
     <input id="pass" type="password" placeholder="Enter your Password"  minlength="8" name="password" required><br><br>
+    <label for="usertype"><b>Usertype</b></label>
+    <select name="usertype" id="usertype" required>
+      <option value="Admin">Admin</option>
+      <option value="Student">Student</option>
+    </select><br><br>
     <script>
 
   window.addEventListener("DOMContentLoaded", (e) => {
@@ -74,9 +86,10 @@ include("dbcn.php");
 </style>
    
     <div class="d-grid gap-2">
-    <input type="submit" value="Signin" name="Signin"  class="btn btn-outline-secondary" >
-    
+    <input type="submit" value="Signin" name="Signin"  class="btn btn-success " >
     </div>
+
+    
     <br>
 
     </section>
@@ -86,9 +99,6 @@ include("dbcn.php");
 
 </form><br>
 
-<div class="d-grid gap-2  d-flex justify-content-center">
-    <a class="btn btn-outline-secondary" target="_blank" href="signup.php">Signup</a> 
-</div>
 
 
 

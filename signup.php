@@ -30,11 +30,14 @@ include("dbcn.php");
     
     <section class="inform d-flex justify-content-center">
     <form class="pp" action="signup.php" method="post">
+      
     <br>
-    <label for="ssid"><b>Student ID</b></label>
+    <label for="ssid"><b>ID</b></label>
     <input id="ssid" type="text" placeholder="Enter your student id" name="ssid"  pattern="[0-9]{9}" required><br><br>
     <label for="fn"><b>Name</b></label>
     <input id="fn" type="text" placeholder="Enter your full name" name="flname" required><br><br>
+    <label for="un"><b>Username</b></label>
+    <input id="un" type="text" placeholder="Enter your username" name="username" required><br><br>
     <label for="mail"><b>Email</b></label>
     <input id="mail" type="text" placeholder="Enter your EDU email" name="email" pattern="[0-9]{9}@eastdelta.edu.bd" required><br><br>
     <label for="pass"><b>Password</b></label>
@@ -112,6 +115,12 @@ input.shown + .show-hide {
 }
 
 </style>
+
+    <label for="usertype"><b>Usertype</b></label>
+    <select name="usertype" id="usertype" required>
+      <option value="admin">Admin</option>
+      <option value="atudent">Student</option>
+    </select><br><br>
    
     <div class="d-grid gap-2">
     <input type="submit" value="Signup" name="Signup" class="btn btn-outline-secondary" >
@@ -135,17 +144,19 @@ input.shown + .show-hide {
 </body>
 </html>
 <?php
-  if($_POST['Signup'])
+  if($_POST['Signup'] == 'POST')
   {
     $ssid = $_POST['ssid'];
     $flname = $_POST['flname'];
+    $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
+    $usertype = $_POST['usertype'];
 
     if($password == $cpassword){
         $hash= password_hash($password, PASSWORD_DEFAULT);
-        $sql ="INSERT INTO `signup` (`StudentID`, `Name`, `email`, `pass`, `date`) VALUES ('$ssid', '$flname', '$email', '$hash', current_timestamp())";
+        $sql ="INSERT INTO `signup` (`StudentID`, `name`,`username`, `email`, `pass`,`usertype`, `date`) VALUES ('$ssid', '$flname','$username', '$email', '$hash','$usertype', current_timestamp())";
     $result = mysqli_query($con, $sql);
         if($result)
             {

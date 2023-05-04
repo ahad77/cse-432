@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Finance</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
             
             <div class="viewname">
                 <span>
-                    <h3><b><?php echo $_SESSION["ssid"]?></b></h3>
+                    <h3><b><?php echo $_SESSION["username"]?></b></h3>
                     <br>
                     <i>student / active</i>
                     <br>
@@ -84,13 +84,19 @@
     <div class="container">
       <div class="row">
         <div class="col-9">
-          <h1>Welcom to EDU Blackbox</h1>
+          <h1>Welcom to EDU Blackbox</h1><br><br>
         </div>
-        <div class="col-6">
-          <b><a class="aa" href="profile.php">🔻Profile</a></b>
+        <div class="col-9">
+        <h3 class="d-flex justify-content-center nott">Account Summary</h3>
         </div>
-        <div class="col-6">
-          .col-6<br>Subsequent columns continue along the new line.
+        <div class="col-3">
+        <h3 class="d-flex justify-content-center nott">Due Date</h3>
+        <div class="container">
+            <a  class="nt" href=""><b>▪️ 1st Installment : 20 February, 2023 </b></a><br>
+            <a  class="nt" href=""><b>▪️ 2nd Installment : 20 March, 2023 </b></a><br>
+            <a  class="nt" href=""><b>▪️ 3rd Installment : 20 April, 2023 </b></a><br>
+            
+          </div>
         </div>
       </div>
     </div>

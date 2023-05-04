@@ -3,12 +3,12 @@ include("dbcn.php");
 
   if($_POST['Signin'])
   {
-      $ssid = $_POST['ssid'];
+      $username = $_POST['username'];
       $password = $_POST['password'];
+      $usertype = $_POST['usertype'];
 
 
-     //$sql = "Select * from signup where StudentID='$ssid' AND pass='$password'";
-      $sql = "Select * from signup where StudentID='$ssid' ";
+      $sql = "Select * from signup where username='$username' and usertype='$usertype' ";
       $result = mysqli_query($con, $sql);
       $num = mysqli_num_rows($result);
       if ($num == 1){
@@ -17,8 +17,21 @@ include("dbcn.php");
             $login= true;
             session_start();
             $_SESSION['loggedin'] = true;
-            $_SESSION['ssid'] = $ssid;
-            header("location: dash.php");
+            $_SESSION['username'] = $username;
+            $_SESSION['usertype'] = $usertype;
+            if($row["usertype"]=="student")
+            {
+              header("location: dash.php");
+            }
+            elseif($row["usertype"]=="admin")
+            {
+              header("location: admindash.php");
+            }
+            else{
+              header("location: alert.php");
+            
+            }
+            
 
           }
           else{
