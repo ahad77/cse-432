@@ -87,7 +87,25 @@
           <h1>Welcom to EDU Blackbox</h1>
         </div>
         <div class="col-8 ">
-          <h4><b><a class="aa" href="profile.php">🔻Profile</a></b></h4>
+          <h4><b><a class="aa" href="profile.php">🔻Profile</a></b></h4> <br><br>
+          <div class="col-5 ">
+            <h6 class="d-flex justify-content-center nott ">Enrolled Courses</h6>
+            <?php 
+      $ssid = $_SESSION["ssid"];
+      $sql = "select * from form where StudentID = $ssid";
+      $result = $con->query($sql);
+                if($result->num_rows > 0){
+                  while($row = $result->fetch_assoc()){
+      ?>
+      <div class="container">
+      <span style="display-inline"> <b> Courses : </b> <?php echo $row['Course']; ?></span><br><br>
+      
+      <?php
+                  }
+                }
+?>
+      </div>
+          </div>
         </div>
         <div class="col-4 ">
         <h4 class="d-flex justify-content-center nott ">News & Announcements</h4>
